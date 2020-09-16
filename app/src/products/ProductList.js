@@ -35,6 +35,7 @@ function ProductList({
               <CardContent
                 name={product.name}
                 description={product.description}
+                price={product.price}
               />
               <footer className="card-footer">
                 <ButtonFooter
