@@ -30,8 +30,8 @@ function ProductDetail({
     setProduct({ ...product, description: e.target.value });
   }
 
-  function handleQuantityChange(e) {
-    setProduct({ ...product, quantity: e.target.value });
+  function handlePriceChange(e) {
+    setProduct({ ...product, price: e.target.value });
   }
 
   return (
@@ -59,21 +59,12 @@ function ProductDetail({
             placeholder="box"
             onChange={handleDescriptionChange}
           />
-          <div className="field">
-            <label className="label" htmlFor="quantity">
-              quantity
-            </label>
-            <input
-              name="quantity"
-              className="input"
-              type="number"
-              min="1"
-              max="100"
-              defaultValue={product.quantity}
-              placeholder="1"
-              onChange={handleQuantityChange}
-            />
-          </div>
+          <InputDetail
+            name="price"
+            value={product.price}
+            placeholder="$25"
+            onChange={handlePriceChange}
+          />
         </div>
       </div>
       <footer className="card-footer ">
